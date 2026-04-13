@@ -30,6 +30,34 @@ h1 {
     padding: 8px;
     border-radius: 5px;
 }
+    .preview-box {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+.preview-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: blur(3px);
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    }
 </style>
 </head>
 
@@ -59,15 +87,21 @@ h1 {
 </div>
     <div class="chapter">
     <h3>Dengue & Malaria</h3>
-    <a href="https://docs.google.com/gview?url=https://rathodabhi0003.github.io/medzy/dengue-malaria.pdf&embedded=true" target="_blank">
-    <button class="btn">Preview PDF</button>
-</a>
 
-<br><br>
+    <!-- Blur Preview -->
+    <div class="preview-box">
+        <iframe src="dengue-malaria.pdf"></iframe>
+        <div class="blur-overlay">
+            🔒 Full PDF Locked<br>
+            Buy to unlock
+        </div>
+    </div>
 
-<a href="dengue-malaria.pdf" download>
-    <button class="btn">Download PDF</button>
-</a>
+    <br>
+
+    <a href="dengue-malaria.pdf" target="_blank">
+        <button class="btn">Preview Full PDF</button>
+    </a>
     </div>
 
 </body>
